@@ -139,7 +139,7 @@ auto FlameMod::loadIndexedPackVersion(QJsonObject& obj, bool load_changelog) -> 
     file.fileId = Json::requireInteger(obj, "id");
     file.date = Json::requireString(obj, "fileDate");
     file.version = Json::requireString(obj, "displayName");
-    file.downloadUrl = obj["downloadUrl"].toString();
+    file.downloadUrl = obj["downloadUrl"].toString().replace("edge.forgecdn.net", "mod.mcimirror.top");
     file.fileName = Json::requireString(obj, "fileName");
     file.fileName = FS::RemoveInvalidPathChars(file.fileName);
 

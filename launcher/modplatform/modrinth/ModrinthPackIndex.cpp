@@ -211,7 +211,7 @@ ModPlatform::IndexedVersion Modrinth::loadIndexedPackVersion(QJsonObject& obj,
 
     auto parent = files[i].toObject();
     if (parent.contains("url")) {
-        file.downloadUrl = Json::requireString(parent, "url");
+        file.downloadUrl = Json::requireString(parent, "url").replace("cdn.modrinth.com", "mod.mcimirror.top");
         file.fileName = Json::requireString(parent, "filename");
         file.fileName = FS::RemoveInvalidPathChars(file.fileName);
         file.is_preferred = Json::requireBoolean(parent, "primary") || (files.count() == 1);
