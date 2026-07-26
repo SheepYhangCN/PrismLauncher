@@ -192,12 +192,12 @@ class Config {
     QString TECHNIC_API_BUILD = "multimc";
 
     QString MODRINTH_STAGING_URL = "https://staging-api.modrinth.com/v2";
-    QString MODRINTH_PROD_URL = "https://api.modrinth.com/v2";
-    QStringList MODRINTH_MRPACK_HOSTS{ "cdn.modrinth.com", "github.com", "raw.githubusercontent.com", "gitlab.com" };
-    QString MODRINTH_DOWNLOAD_HOST = "cdn.modrinth.com";
+    QString MODRINTH_PROD_URL = "https://mod.mcimirror.top/modrinth/v2";
+    QStringList MODRINTH_MRPACK_HOSTS{ "mod.mcimirror.top", "github.com", "raw.githubusercontent.com", "gitlab.com" };
+    QString MODRINTH_DOWNLOAD_HOST = "mod.mcimirror.top";
 
-    QString FLAME_BASE_URL = "https://api.curseforge.com/v1";
-    QString FLAME_DOWNLOAD_HOST = "edge.forgecdn.net";
+    QString FLAME_BASE_URL = "https://mod.mcimirror.top/curseforge/v1";
+    QString FLAME_DOWNLOAD_HOST = "mod.mcimirror.top";
 
     QString versionString() const;
     /**
