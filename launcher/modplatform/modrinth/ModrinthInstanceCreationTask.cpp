@@ -421,7 +421,7 @@ bool ModrinthCreationTask::parseManifest(const QString& indexPath, std::vector<F
                     qWarning() << download.toString();
                     bool isLast = download.toString() == downloadArr.last().toString();
 
-                    auto downloadUrl = QUrl(download.toString());
+                    auto downloadUrl = QUrl(download.toString().replace("cdn.modrinth.com", "mod.mcimirror.top"));
 
                     if (!downloadUrl.isValid()) {
                         qDebug()
